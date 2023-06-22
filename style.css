@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+/* Utility */
+.container {
+	max-width: 900px;
+	margin: auto;
+}
+
+/* Navigation */
+.hamburger-button {
+}
+
+.close {
+	rotate: 45deg;
+}
