@@ -16,6 +16,29 @@ The bullet points listed on the requirements are
 
 # Personal Notes / Dev Notes
 
+### 1st Step
+
+The first step is to planning, analysis and design so I will be off this README
+creating my planning my website
+
+### 2nd Step
+
+Scaffolding is the next step and creating a basic layout of the website
+
+### 3rd Step
+
+Next will be making the website in gray scale later implementing colours
+
+### 4th Step
+
+The website will be built for mobile first then will be reactive to screen size
+changes
+
+### 5th Step
+
+Implementing features and polishing the website along with testing will be next
+This will be repeated until completion
+
 18/06/23
 
 Since I was working on projects for the previous cohort I have a better idea of
@@ -43,27 +66,13 @@ the details which are lacking from the low fidelity
 Wireframe -
 https://www.figma.com/file/xY4LnrM7WDiDuyYQhsa6Ni/Showcase-website?type=design&node-id=0%3A1&t=3tUjJbEGDFRfwpzR-1
 
----
+22/06/23
 
-### 1st Step
+Navigation bar - Doing the navigation bar first as it will be present throughout
+every viewport and it is the topmost element
 
-The first step is to planning, analysis and design so I will be off this README
-creating my planning my website
+Using SVGs I created a hamburger, I learned this from
+https://youtube.com/watch?v=R00QiudbD4Y&t=2658s
 
-### 2nd Step
-
-Scaffolding is the next step and creating a basic layout of the website
-
-### 3rd Step
-
-Next will be making the website in gray scale later implementing colours
-
-### 4th Step
-
-The website will be built for mobile first then will be reactive to screen size
-changes
-
-### 5th Step
-
-Implementing features and polishing the website along with testing will be next
-This will be repeated until completion
+Now I need to give it functionality I will do this myself as I don't want to
+depend fully on the tutorial
