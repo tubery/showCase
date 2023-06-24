@@ -1,6 +1,5 @@
-*,
-*::before,
-*::after {
+/* CSS Reset */
+* {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
@@ -12,16 +11,123 @@ body {
 	font-size: 16px;
 }
 
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Variables */
+:root {
+	--animation: 0.25s cubic-bezier(0.18, 1, 0.21, 1);
+
+	--border-bot: 1px solid black;
+
+	--primary-color: gray;
+	--primary-color-light: lightgray;
+}
+
 /* Utility */
 .container {
 	max-width: 900px;
 	margin: auto;
 }
 
-/* Navigation */
-.hamburger-button {
+/* ****** Navigation ************************************* */
+#nav-bar {
+	padding: 0 1rem;
+	position: sticky;
+	top: 0;
+	left: 0;
+	transition: var(--animation);
+	border-bottom: 1px solid transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.close {
-	rotate: 45deg;
+#nav-bar.open {
+	background-color: var(--primary-color-light);
+	border-bottom: var(--border-bot);
 }
+
+.logo {
+	opacity: 0;
+	transform: translate(-100%);
+	transition: var(--animation);
+}
+.logo.open {
+	opacity: 1;
+	transform: translate(0);
+}
+
+/* Nav icon */
+.hamburger-button {
+	cursor: pointer;
+}
+
+.top-bun,
+.patty,
+.bottom-bun {
+	transition: var(--animation);
+}
+
+.top-bun.close {
+	rotate: 45deg;
+	transform: translate(25px, -25px);
+}
+.patty.close {
+	opacity: 0;
+}
+.bottom-bun.close {
+	rotate: -45deg;
+	transform: translate(-55px, -5px);
+}
+
+/* Sliding Menu onto screen */
+.nav-menu {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	background-color: var(--primary-color-light);
+	translate: -100%;
+	transition: var(--animation);
+}
+
+.nav-menu.open {
+	translate: 0;
+}
+
+.nav-link-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-link {
+	width: 100%;
+	height: 100px;
+	border-bottom: var(--border-bot);
+}
+
+.nav-link:hover {
+	background-color: var(--primary-color);
+}
+
+.nav-link a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 1.1rem;
+	font-size: 1.3rem;
+}
+
+/* Hero / Home section */
