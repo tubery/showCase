@@ -76,3 +76,15 @@ https://youtube.com/watch?v=R00QiudbD4Y&t=2658s
 
 Now I need to give it functionality I will do this myself as I don't want to
 depend fully on the tutorial
+
+24/06/23
+
+Today I will make as much progress as possible starting with the navigartion
+then moving to the home/hero section and more
+
+I have implemented a navigation bar which I am quite happy with functionality
+wise however I was unable to solve an issue regarding the menu on iPhone SE
+which shows a white space meaning a container is not the right size which I
+could not debug however it only appears on this specific view
+
+Now it is time to work on the hero section
