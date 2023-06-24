@@ -42,10 +42,13 @@ a {
 	top: 0;
 	left: 0;
 	transition: var(--animation);
-	border-bottom: 1px solid transparent;
+	border-bottom: 1px solid black;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	height: 70px;
+	z-index: 9999;
+	background-color: white;
 }
 
 #nav-bar.open {
@@ -54,13 +57,10 @@ a {
 }
 
 .logo {
-	opacity: 0;
-	transform: translate(-100%);
-	transition: var(--animation);
+	color: black;
 }
 .logo.open {
-	opacity: 1;
-	transform: translate(0);
+	color: white;
 }
 
 /* Nav icon */
@@ -95,6 +95,7 @@ a {
 	background-color: var(--primary-color-light);
 	translate: -100%;
 	transition: var(--animation);
+	z-index: 9998;
 }
 
 .nav-menu.open {
@@ -127,7 +128,138 @@ a {
 	width: 100%;
 	height: 100%;
 	padding: 1.1rem;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 }
 
 /* Hero / Home section */
+#home {
+	height: calc(100vh - 70px);
+	background-color: #343d46;
+}
+
+.hero-wrapper {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 1rem;
+	place-content: center space-evenly;
+}
+
+.hero-title {
+	color: white;
+	font-size: 3rem;
+	margin: 0;
+}
+
+.hero-text {
+	max-width: 400px;
+	color: white;
+}
+
+.star-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+/* Referenced - https://youtube.com/watch?v=Kf4BP-WLkVs */
+/* Create star animation */
+/* place absolute on top of hero section, draw tail */
+/* with gradient to mimic movement of shooting star */
+/* place all stars in same starting spot in center */
+/* drop shadow to mimic glow */
+.star {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 3px;
+	width: 150px;
+	background: linear-gradient(-45deg, white, rgba(240, 240, 240, 0.2));
+	border-radius: 30%;
+	filter: drop-shadow(0 0 4px white);
+	animation: tail 3s ease infinite, falling 3s ease-in-out infinite;
+	rotate: 40deg;
+}
+
+@keyframes tail {
+	0% {
+		width: 0px;
+	}
+	30% {
+		width: 150px;
+	}
+	100% {
+		width: 0px;
+	}
+}
+
+@keyframes falling {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(1200px);
+	}
+}
+
+/* Create star shape of cross using rotated bars */
+/* rotate into position */
+.star::before,
+.star::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 2px);
+	right: 0;
+	height: 4px;
+	width: 15px;
+	background: linear-gradient(-45deg, white, white);
+	border-radius: 100%;
+	transform: translateX(50%) rotateZ(45deg);
+	animation: shining 1s ease-in-out infinite;
+}
+.star::after {
+	transform: translateX(50%) rotateZ(-45deg);
+}
+
+@keyframes shining {
+	0% {
+		width: 10px;
+	}
+	50% {
+		width: 15px;
+	}
+	100% {
+		width: 10px;
+	}
+}
+
+/* Move stars into different positions */
+.star:nth-child(1) {
+	top: calc(50% - 300px);
+	left: calc(50% - 200px);
+	animation-delay: 1s;
+}
+.star:nth-child(2) {
+	top: calc(50% - 200px);
+	left: calc(50% - 400px);
+	animation-delay: 2s;
+}
+.star:nth-child(3) {
+	top: calc(50% - 0px);
+	left: calc(50% - 500px);
+	animation-delay: 2.9s;
+}
+.star:nth-child(4) {
+	top: calc(50% + 200px);
+	left: calc(50% - 0px);
+	animation-delay: 4s;
+}
+.star:nth-child(5) {
+	top: calc(50% - 200px);
+	left: calc(50% + 100px);
+	animation-delay: 0.1s;
+}
