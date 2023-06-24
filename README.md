@@ -88,3 +88,6 @@ which shows a white space meaning a container is not the right size which I
 could not debug however it only appears on this specific view
 
 Now it is time to work on the hero section
+
+Created a hero section with shooting star animations while it still needs polish
+and the right colours i am happy with it for now
