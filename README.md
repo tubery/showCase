@@ -91,3 +91,14 @@ Now it is time to work on the hero section
 
 Created a hero section with shooting star animations while it still needs polish
 and the right colours i am happy with it for now
+
+25/06/23
+
+About section complete functionality wise also as it is quite simple I will also
+be trying to complete the web development section today
+
+I have completed the web development section however as with all the other
+sections it is designed for mobile at the moment I will later correct the whole
+website for responsiveness and colour
+
+Code is also messy and unstructure will have to clean up later

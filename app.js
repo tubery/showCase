@@ -12,6 +12,10 @@ const aboutCircle = document.querySelectorAll(".about-circle");
 const aboutTitle = document.querySelectorAll(".about-title");
 const aboutText = document.querySelectorAll(".about-text");
 
+// Web dev section
+const webDevTitle = document.querySelectorAll(".web-dev-title");
+const cards = document.querySelectorAll(".card");
+
 // Hamburger functionality
 function menuIconToggle() {
 	topBun.classList.toggle("close");
@@ -20,6 +24,10 @@ function menuIconToggle() {
 	navMenu.classList.toggle("open");
 	navBar.classList.toggle("open");
 	logo.classList.toggle("open");
+}
+
+function addObserver(item) {
+	item.forEach((element) => observer.observe(element));
 }
 
 hamburgerButton.addEventListener("click", () => {
@@ -34,7 +42,7 @@ hamburgerButton.addEventListener("click", () => {
 	}
 });
 
-// About amimations
+// Observer options for animations
 let options = {
 	rootMargin: "0px",
 	threshold: 0.5,
@@ -48,6 +56,9 @@ const intersectionCallback = (items) => {
 	});
 };
 const observer = new IntersectionObserver(intersectionCallback, options);
-aboutCircle.forEach((element) => observer.observe(element));
-aboutTitle.forEach((element) => observer.observe(element));
-aboutText.forEach((element) => observer.observe(element));
+
+addObserver(aboutCircle);
+addObserver(aboutTitle);
+addObserver(aboutText);
+addObserver(webDevTitle);
+addObserver(cards);
