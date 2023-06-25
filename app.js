@@ -7,6 +7,12 @@ const navMenu = document.querySelector(".nav-menu");
 const navBar = document.querySelector("#nav-bar");
 const logo = document.querySelector(".logo");
 
+// About section
+const aboutCircle = document.querySelectorAll(".about-circle");
+const aboutTitle = document.querySelectorAll(".about-title");
+const aboutText = document.querySelectorAll(".about-text");
+
+// Hamburger functionality
 function menuIconToggle() {
 	topBun.classList.toggle("close");
 	patty.classList.toggle("close");
@@ -27,3 +33,21 @@ hamburgerButton.addEventListener("click", () => {
 		menuIconToggle();
 	}
 });
+
+// About amimations
+let options = {
+	rootMargin: "0px",
+	threshold: 0.5,
+};
+// Intersection observer
+const intersectionCallback = (items) => {
+	items.forEach((item) => {
+		if (item.isIntersecting) {
+			item.target.classList.add("show");
+		}
+	});
+};
+const observer = new IntersectionObserver(intersectionCallback, options);
+aboutCircle.forEach((element) => observer.observe(element));
+aboutTitle.forEach((element) => observer.observe(element));
+aboutText.forEach((element) => observer.observe(element));
