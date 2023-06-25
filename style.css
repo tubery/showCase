@@ -17,6 +17,7 @@ li {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 /* Variables */
@@ -46,7 +47,7 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 70px;
+	height: 60px;
 	z-index: 9999;
 	background-color: white;
 }
@@ -133,7 +134,7 @@ a {
 
 /* Hero / Home section */
 #home {
-	height: calc(100vh - 70px);
+	height: calc(100vh - 60px);
 	background-color: #222;
 }
 
@@ -144,6 +145,8 @@ a {
 	grid-template-columns: 1fr;
 	padding: 1rem;
 	place-content: center space-evenly;
+	/* background: radial-gradient(ellipse at bottom, #0d1e31, #111); */
+	background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
 .hero-title {
@@ -288,22 +291,23 @@ a {
 	background-color: gray;
 	margin: auto;
 	opacity: 0;
-	transform: translateY(200px);
+	transform: translateY(100px);
 	transition: 0.8s ease;
 }
 
 .about-title {
-	margin: 1rem;
+	margin: 1rem 0;
 	opacity: 0;
-	transform: translateY(200px);
+	transform: translateY(100px);
 	transition: 0.9s ease;
+	text-align: left;
 }
 
 .about-text {
 	margin: auto;
 	max-width: 400px;
 	opacity: 0;
-	transform: translateY(200px);
+	transform: translateY(100px);
 	transition: 1s ease;
 }
 
@@ -320,4 +324,67 @@ a {
 #web-dev {
 	margin: 5rem 1rem;
 	height: 100vh;
+}
+
+.web-dev-wrapper {
+	display: grid;
+	place-content: center;
+	grid-template-areas:
+		"title"
+		"reason1"
+		"reason2"
+		"reason3";
+	gap: 1rem;
+	overflow: hidden;
+}
+
+.web-dev-title {
+	grid-area: title;
+	opacity: 0;
+	transform: translateY(100px);
+	transition: 1s ease;
+}
+
+.card {
+	border: 3px solid black;
+	opacity: 0;
+	transform: translateY(100px);
+	transition: 1s ease;
+}
+
+.card:hover {
+	background-color: #b8d9ff;
+	border: 3px solid #b8d9ff;
+}
+
+.card:hover .card-img {
+	transform: scale(1.2);
+}
+
+.image-container {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.card-img {
+	width: 100%;
+	height: 100%;
+	background: url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80");
+	background-size: cover;
+	transition: 1s ease;
+}
+
+.card-title {
+	padding: 0 1rem;
+}
+
+.card-text {
+	padding: 0 1rem 1rem 1rem;
+}
+
+.card.show,
+.web-dev-title.show {
+	opacity: 1;
+	transform: translate(0);
 }
