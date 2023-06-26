@@ -102,3 +102,8 @@ sections it is designed for mobile at the moment I will later correct the whole
 website for responsiveness and colour
 
 Code is also messy and unstructure will have to clean up later
+
+26/06/23
+
+I have run out of ideas on how to create the last section of the website since I
+am not happy with it I will need to rethink this part
