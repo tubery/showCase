@@ -10,7 +10,7 @@
 		<!-- Navigation -->
 		<nav id="nav-bar">
 			<button class="hamburger-button" data-state="open">
-				<svg class="hamburger" viewbox="0 0 100 100" width="25">
+				<svg class="hamburger" viewbox="0 0 100 100" width="35">
 					<rect
 						class="top-bun"
 						width="80"
@@ -39,12 +39,13 @@
 		<div class="nav-menu">
 			<ul class="nav-link-wrapper">
 				<li class="nav-link">
-					<a href="#"
+					<a href="#" onclick="closeNav()"
 						>Home
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
 							height="24"
+							class="svg-arrow"
 						>
 							<path
 								d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
@@ -53,12 +54,13 @@
 					</a>
 				</li>
 				<li class="nav-link">
-					<a href="#"
+					<a href="#about" onclick="closeNav()"
 						>About
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
 							height="24"
+							class="svg-arrow"
 						>
 							<path
 								d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
@@ -67,12 +69,13 @@
 					</a>
 				</li>
 				<li class="nav-link">
-					<a href="#"
+					<a href="#web-dev" onclick="closeNav()"
 						>Web Dev
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
 							height="24"
+							class="svg-arrow"
 						>
 							<path
 								d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
@@ -81,12 +84,13 @@
 					</a>
 				</li>
 				<li class="nav-link">
-					<a href="#"
+					<a href="#founders-coders" onclick="closeNav()"
 						>Founders and Coders
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
 							height="24"
+							class="svg-arrow"
 						>
 							<path
 								d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
@@ -107,14 +111,18 @@
 			</div>
 			<div class="hero-wrapper">
 				<div class="container">
+					<div class="moon">
+						<div class="crater"></div>
+						<div class="crater"></div>
+						<div class="crater"></div>
+					</div>
+					<div class="space"></div>
 					<h1 class="hero-title">Peter Dinh</h1>
 					<p class="hero-text">
-						Aspiring web developer with a love of all things tech
-						based in London
+						Lorem, ipsum dolor sit amet consectetur adipisicing
+						elit. Maiores, sit!
 					</p>
-					<p class="hero-text">
-						Currently working as a data entry operator
-					</p>
+					<p class="hero-text">Lorem ipsum dolor sit amet.</p>
 				</div>
 			</div>
 		</section>
@@ -187,23 +195,23 @@
 			<div class="founders-coders-wrapper">
 				<div class="container">
 					<hr />
-					<h2>Founders and Coders</h2>
-					<h3>Lorem ipsum dolor sit amet.</h3>
-					<p>
+					<h2 class="fac-text">Founders and Coders</h2>
+					<h3 class="fac-text">Lorem ipsum dolor sit amet.</h3>
+					<p class="fac-text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Molestiae temporibus amet, iste quae magnam eveniet,
 						dolore vero cum distinctio nihil expedita ducimus
 						voluptatum dicta similique eos soluta esse, qui odio.
 					</p>
-					<h3>Lorem ipsum dolor sit amet.</h3>
-					<p>
+					<h3 class="fac-text">Lorem ipsum dolor sit amet.</h3>
+					<p class="fac-text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Molestiae temporibus amet, iste quae magnam eveniet,
 						dolore vero cum distinctio nihil expedita ducimus
 						voluptatum dicta similique eos soluta esse, qui odio.
 					</p>
-					<h3>Lorem ipsum dolor sit amet.</h3>
-					<p>
+					<h3 class="fac-text">Lorem ipsum dolor sit amet.</h3>
+					<p class="fac-text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Molestiae temporibus amet, iste quae magnam eveniet,
 						dolore vero cum distinctio nihil expedita ducimus
