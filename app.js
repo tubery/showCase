@@ -16,6 +16,9 @@ const aboutText = document.querySelectorAll(".about-text");
 const webDevTitle = document.querySelectorAll(".web-dev-title");
 const cards = document.querySelectorAll(".card");
 
+// FaC section
+const facText = document.querySelectorAll(".fac-text");
+
 // Hamburger functionality
 function menuIconToggle() {
 	topBun.classList.toggle("close");
@@ -24,6 +27,7 @@ function menuIconToggle() {
 	navMenu.classList.toggle("open");
 	navBar.classList.toggle("open");
 	logo.classList.toggle("open");
+	hamburgerButton.classList.toggle("open");
 }
 
 function addObserver(item) {
@@ -41,6 +45,12 @@ hamburgerButton.addEventListener("click", () => {
 		menuIconToggle();
 	}
 });
+
+// Close menu
+function closeNav() {
+	hamburgerButton.setAttribute("data-state", "open");
+	menuIconToggle();
+}
 
 // Observer options for animations
 let options = {
@@ -62,3 +72,4 @@ addObserver(aboutTitle);
 addObserver(aboutText);
 addObserver(webDevTitle);
 addObserver(cards);
+addObserver(facText);
