@@ -107,3 +107,9 @@ Code is also messy and unstructure will have to clean up later
 
 I have run out of ideas on how to create the last section of the website since I
 am not happy with it I will need to rethink this part
+
+27/06/23
+
+Now that I have got most of the basic design out I will try to refine the work
+and add things. Since I am low on time this will have to be hacked together as
+best as I can.
