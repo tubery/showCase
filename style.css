@@ -166,7 +166,7 @@ a {
 	grid-template-columns: 1fr;
 	padding: 1rem;
 	place-content: center space-evenly;
-	background: #090b0c;
+	background: var(--black);
 }
 
 /* Reference */
@@ -472,7 +472,7 @@ a {
 
 .about-text {
 	margin: auto;
-	max-width: 400px;
+	max-width: 450px;
 	opacity: 0;
 	transform: translateY(100px);
 	transition: 1s ease;
@@ -495,14 +495,24 @@ a {
 
 .web-dev-wrapper {
 	display: grid;
-	place-content: center;
 	grid-template-areas:
 		"title"
 		"reason1"
 		"reason2"
 		"reason3";
+	place-content: center;
 	gap: 1rem;
 	/* overflow: hidden; */
+}
+
+@media only screen and (min-width: 600px) {
+	.web-dev-wrapper {
+		grid-template-areas:
+			"title title"
+			"reason1 reason1"
+			"reason2 reason3";
+		/* overflow: hidden; */
+	}
 }
 
 .web-dev-title {
@@ -518,6 +528,16 @@ a {
 	transform: translateY(100px);
 	transition: transform 1s ease, background var(--animation),
 		color var(--animation), border var(--animation), opacity 1s ease;
+}
+
+.card:nth-child(1) {
+	grid-area: reason3;
+}
+.card:nth-child(2) {
+	grid-area: reason1;
+}
+.card:nth-child(3) {
+	grid-area: reason2;
 }
 
 .card:hover {
