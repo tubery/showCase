@@ -57,6 +57,7 @@ a {
 	height: 60px;
 	z-index: 9999;
 	background-color: var(--white);
+	overflow: hidden;
 }
 
 #nav-bar.open {
@@ -69,6 +70,32 @@ a {
 }
 .logo.open {
 	color: var(--white);
+}
+
+.sun {
+	width: 50px;
+	height: 50px;
+	background: #fd3516;
+	border-radius: 50%;
+	box-shadow: 0 0 0 5px #f96229, 0 0 0 10px #f9812b, 0 0 0 15px #fc8e1f,
+		0 0 0 20px #feb125, 0 0 0 25px #fce13d, 0 0 30px 35px #ffde0010;
+	animation: radiation 2s infinite linear;
+}
+
+@keyframes radiation {
+	0% {
+		box-shadow: 0 0 0 5px #f96229, 0 0 0 10px #f9812b, 0 0 0 15px #fc8e1f,
+			0 0 0 20px #feb125, 0 0 0 25px #fce13d, 0 0 30px 35px #ffde0010;
+	}
+	50% {
+		box-shadow: 0 0 0 10px #f96229, 0 0 0 15px #f9812b, 0 0 0 20px #fc8e1f,
+			0 0 0 25px #feb125, 0 0 0 30px #fce13d, 0 0 35px 40px #ffde0010;
+	}
+
+	100% {
+		box-shadow: 0 0 0 5px #f96229, 0 0 0 10px #f9812b, 0 0 0 15px #fc8e1f,
+			0 0 0 20px #feb125, 0 0 0 25px #fce13d, 0 0 30px 35px #ffde0010;
+	}
 }
 
 /* Nav icon */
@@ -154,7 +181,7 @@ a {
 	fill: var(--white);
 }
 
-/* Hero / Home section */
+/* ****** Hero / Home section ************************************* */
 #home {
 	height: calc(100vh - 60px);
 }
@@ -171,6 +198,7 @@ a {
 
 /* Reference */
 /* https://dev.to/0shuvo0/pure-css-infinite-spacegalaxy-with-just-one-div-4o02 */
+/* Starry sky backgorund */
 .space {
 	position: absolute;
 	top: 50%;
@@ -243,17 +271,35 @@ a {
 	animation: glow 5s ease-in-out infinite, spin 30s linear infinite;
 }
 
-/* .moon::after {
+/* sattelite */
+.moon::before {
+	content: "";
+	position: absolute;
+	top: -155%;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #f5f5f5;
+	box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0.05),
+		0 0 0 0.5em rgba(255, 255, 255, 0.05),
+		0 0 0 0.7em rgba(255, 255, 255, 0.05);
+	z-index: 10;
+	animation: spin 10s linear infinite;
+}
+
+/* Orbit lines */
+.moon::after {
 	content: "";
 	position: absolute;
 	top: -150%;
 	left: -150%;
 	width: 400%;
 	height: 400%;
-	border: 3px dotted white;
+	border: 4px dotted white;
 	border-radius: 50%;
 	background-color: transparent;
-} */
+}
 
 @keyframes glow {
 	0% {
@@ -279,7 +325,7 @@ a {
 		transform: rotate(0deg);
 	}
 	100% {
-		transform: rotate(360deg);
+		transform: rotate(-360deg);
 	}
 }
 
@@ -434,7 +480,7 @@ a {
 	animation-delay: 0.1s;
 }
 
-/* About section */
+/* ****** About section ************************************* */
 #about {
 	margin: 5rem 1rem;
 	height: 100vh;
@@ -451,15 +497,118 @@ a {
 	text-align: center;
 }
 
-.about-circle {
+.earth {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	background-color: gray;
+	background-color: #0569b5;
 	margin: auto;
 	opacity: 0;
 	transform: translateY(100px);
 	transition: 1s ease;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 0 10px #c0d8f8, 0 0 0 25px #d2e6ff, 0 0 0 35px #deedff;
+}
+
+.cloud {
+	position: absolute;
+	left: 45%;
+	top: 50%;
+	width: 40px;
+	height: 10px;
+	border-radius: 2rem;
+	background: #f2f1e6;
+	animation: airflow 4s ease-in-out infinite;
+}
+
+.cloud:nth-child(2) {
+	position: absolute;
+	left: 20%;
+	top: 30%;
+	width: 40px;
+	height: 15px;
+	border-radius: 2rem;
+	background: #f2f1e6;
+	animation: airflow 5s ease-in-out infinite;
+	animation-delay: 0.5s;
+}
+
+.cloud:nth-child(3) {
+	position: absolute;
+	left: 70%;
+	top: 70%;
+	width: 70px;
+	height: 20px;
+	border-radius: 2rem;
+	background: #f2f1e6;
+	animation: airflow 5s ease-in-out infinite;
+	animation-delay: 1s;
+}
+
+@keyframes airflow {
+	0% {
+		transform: translateX(-200px);
+	}
+
+	100% {
+		transform: translateX(200px);
+	}
+}
+
+.land {
+	position: absolute;
+	left: 70%;
+	top: 35%;
+	width: 130px;
+	height: 100px;
+	border-radius: 40%;
+	background: #67ae78;
+	z-index: -1;
+	animation: land-spin 10s ease-in-out infinite;
+}
+
+.land:nth-child(2) {
+	position: absolute;
+	left: -30%;
+	top: 10%;
+	width: 100px;
+	height: 80px;
+	border-radius: 40%;
+	background: #67ae78;
+	z-index: -1;
+}
+
+.land:nth-child(3) {
+	position: absolute;
+	left: 60%;
+	top: 20%;
+	width: 20px;
+	height: 20px;
+	border-radius: 40%;
+	background: #67ae78;
+	z-index: -1;
+}
+
+.land:nth-child(4) {
+	position: absolute;
+	left: 180%;
+	top: 30%;
+	width: 70px;
+	height: 50px;
+	border-radius: 40%;
+	background: #67ae78;
+	z-index: -1;
+}
+
+@keyframes land-spin {
+	0% {
+		transform: translateX(260px);
+	}
+
+	100% {
+		transform: translateX(-450px);
+	}
 }
 
 .about-title {
@@ -487,7 +636,7 @@ a {
 	transform: translateY(0);
 }
 
-/* Web development */
+/* ****** Web development section ************************************* */
 #web-dev {
 	margin: 5rem 1rem;
 	min-height: 100vh;
@@ -502,7 +651,6 @@ a {
 		"reason3";
 	place-content: center;
 	gap: 1rem;
-	/* overflow: hidden; */
 }
 
 @media only screen and (min-width: 600px) {
@@ -511,7 +659,6 @@ a {
 			"title title"
 			"reason1 reason1"
 			"reason2 reason3";
-		/* overflow: hidden; */
 	}
 }
 
@@ -578,7 +725,73 @@ a {
 	transform: translate(0);
 }
 
-/* Founders and coders */
+.saturn {
+	width: 200px;
+	height: 200px;
+	background-color: #cc5803;
+	margin: 3rem 0 0 0;
+	border-radius: 50%;
+	position: relative;
+	rotate: -10deg;
+	transition: 1s ease;
+	transform: translateY(100px);
+	opacity: 0;
+}
+
+.saturn.show {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.top {
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	background: #cc5803;
+	border-radius: 10rem 10rem 0 0;
+	z-index: 10;
+}
+.bot {
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	background: #cc5803;
+	border-radius: 0rem 0rem 10rem 10rem;
+	z-index: -2;
+}
+
+.rings {
+	/* width: 200%;
+	height: 50%;
+	position: absolute;
+	left: -50%;
+	top: 25%;
+	border-radius: 50%;
+	background: radial-gradient(
+		#cc5803 35.2%,
+		white 30%,
+		#b8b08d 20%,
+		#b8b08d 100%
+	);
+	z-index: 0; */
+}
+
+.rings {
+	width: 200%;
+	height: 200%;
+	border: solid 80px #b8b08d;
+	border-radius: 50%;
+	top: -50%;
+	left: -50%;
+	position: absolute;
+	transform: rotate3d(1, 0, 0, 75deg);
+}
+
+/* ****** Founders and coders section ************************************* */
 #founders-coders {
 	margin: 5rem 0 0 0;
 	padding: 1rem 0;
@@ -601,7 +814,7 @@ a {
 	transform: translateY(0);
 }
 
-/* Footer */
+/* ****** Footer section ************************************* */
 footer {
 	height: 60px;
 	margin: 5rem 0 0 0;

@@ -5,16 +5,16 @@ const patty = document.querySelector(".patty");
 const bottomBun = document.querySelector(".bottom-bun");
 const navMenu = document.querySelector(".nav-menu");
 const navBar = document.querySelector("#nav-bar");
-const logo = document.querySelector(".logo");
 
 // About section
-const aboutCircle = document.querySelectorAll(".about-circle");
+const earth = document.querySelectorAll(".earth");
 const aboutTitle = document.querySelectorAll(".about-title");
 const aboutText = document.querySelectorAll(".about-text");
 
 // Web dev section
 const webDevTitle = document.querySelectorAll(".web-dev-title");
 const cards = document.querySelectorAll(".card");
+const saturn = document.querySelectorAll(".saturn");
 
 // FaC section
 const facText = document.querySelectorAll(".fac-text");
@@ -26,7 +26,6 @@ function menuIconToggle() {
 	bottomBun.classList.toggle("close");
 	navMenu.classList.toggle("open");
 	navBar.classList.toggle("open");
-	logo.classList.toggle("open");
 	hamburgerButton.classList.toggle("open");
 }
 
@@ -67,9 +66,10 @@ const intersectionCallback = (items) => {
 };
 const observer = new IntersectionObserver(intersectionCallback, options);
 
-addObserver(aboutCircle);
+addObserver(earth);
 addObserver(aboutTitle);
 addObserver(aboutText);
 addObserver(webDevTitle);
+addObserver(saturn);
 addObserver(cards);
 addObserver(facText);
