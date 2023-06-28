@@ -113,3 +113,10 @@ am not happy with it I will need to rethink this part
 Now that I have got most of the basic design out I will try to refine the work
 and add things. Since I am low on time this will have to be hacked together as
 best as I can.
+
+28/06/23
+
+Taking inspiration from other creators and implementing designs myself I have
+more confidence in my css as I am able to see how they made it. Mostly I need
+help with colours and design as they are a whole extra skill to learn and hone.
+So I have referenced most colurs for the planets
