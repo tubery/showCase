@@ -120,3 +120,8 @@ Taking inspiration from other creators and implementing designs myself I have
 more confidence in my css as I am able to see how they made it. Mostly I need
 help with colours and design as they are a whole extra skill to learn and hone.
 So I have referenced most colurs for the planets
+
+29/06/23
+
+Stuck on making saturn due to its split parts to create visual of rings I will
+need a simpler version of it or use someone elses design
