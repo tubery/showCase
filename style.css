@@ -22,6 +22,18 @@ a {
 	color: inherit;
 }
 
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
 /* Variables */
 :root {
 	--animation: 0.25s cubic-bezier(0.18, 1, 0.21, 1);
@@ -65,13 +77,6 @@ a {
 	border-bottom: 1px solid var(--white);
 }
 
-.logo {
-	color: var(--black);
-}
-.logo.open {
-	color: var(--white);
-}
-
 .sun {
 	width: 50px;
 	height: 50px;
@@ -79,7 +84,7 @@ a {
 	border-radius: 50%;
 	box-shadow: 0 0 0 5px #f96229, 0 0 0 10px #f9812bd3, 0 0 0 15px #fc8d1f9a,
 		0 0 0 20px #feb2255d, 0 0 0 25px #fce23d23, 0 0 30px 35px #ffde0010;
-	animation: radiation 2s infinite linear;
+	animation: radiation 4s infinite linear;
 }
 
 @keyframes radiation {
@@ -273,7 +278,7 @@ a {
 	box-shadow: 0 0 0 0.6em rgba(255, 255, 255, 0.05),
 		0 0 0 1.2em rgba(255, 255, 255, 0.05),
 		0 0 0 1.8em rgba(255, 255, 255, 0.05);
-	animation: glow 5s ease-in-out infinite, spin 30s linear infinite;
+	animation: glow 5s ease-in-out infinite, spin 60s linear infinite;
 }
 
 @keyframes glow {
@@ -327,23 +332,6 @@ a {
 	}
 }
 
-/* sattelite */
-.moon::before {
-	content: "";
-	position: absolute;
-	top: -155%;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: #f5f5f5;
-	box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0.05),
-		0 0 0 0.5em rgba(255, 255, 255, 0.05),
-		0 0 0 0.7em rgba(255, 255, 255, 0.05);
-	z-index: 10;
-	animation: spin 10s linear infinite;
-}
-
 /* Orbit lines */
 .moon::after {
 	content: "";
@@ -352,9 +340,10 @@ a {
 	left: -150%;
 	width: 400%;
 	height: 400%;
-	border: 4px dotted white;
+	border: 4px dotted rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
 	background-color: transparent;
+	z-index: -1;
 }
 
 .crater:nth-child(1) {
@@ -392,12 +381,13 @@ a {
 
 .hero-title {
 	color: var(--white);
-	font-size: 3rem;
+	font-size: 6rem;
 	margin: 0;
 }
 
 .hero-text {
-	max-width: 400px;
+	font-size: 1.2rem;
+	max-width: 500px;
 	color: var(--white);
 }
 
@@ -559,7 +549,7 @@ a {
 	height: 10px;
 	border-radius: 2rem;
 	background: #f2f1e6;
-	animation: airflow 4s ease-in-out infinite;
+	animation: airflow 8s ease-in-out infinite;
 }
 
 .cloud:nth-child(2) {
@@ -571,7 +561,7 @@ a {
 	border-radius: 2rem;
 	background: #f2f1e6;
 	animation: airflow 5s ease-in-out infinite;
-	animation-delay: 0.5s;
+	animation-delay: 1s;
 }
 
 .cloud:nth-child(3) {
@@ -583,7 +573,7 @@ a {
 	border-radius: 2rem;
 	background: #f2f1e6;
 	animation: airflow 5s ease-in-out infinite;
-	animation-delay: 1s;
+	animation-delay: 2s;
 }
 
 @keyframes airflow {
@@ -605,7 +595,7 @@ a {
 	border-radius: 40%;
 	background: #67ae78;
 	z-index: -1;
-	animation: land-spin 10s ease-in-out infinite;
+	animation: land-spin 20s ease-in-out infinite;
 }
 
 .land:nth-child(2) {
@@ -660,8 +650,9 @@ a {
 }
 
 .about-text {
+	font-size: 1.2rem;
 	margin: auto;
-	max-width: 450px;
+	max-width: 500px;
 	opacity: 0;
 	transform: translateY(100px);
 	transition: 1s ease;
@@ -756,7 +747,8 @@ a {
 }
 
 .card-text {
-	padding: 0 1rem 1rem 1rem;
+	font-size: 1.2rem;
+	padding: 0 1.1rem 1.1rem 1.1rem;
 }
 
 .card.show,
@@ -911,7 +903,18 @@ a {
 	margin: 0 1rem;
 }
 
+h2.fac-text {
+	font-size: 1.8rem;
+}
+
+h3.fac-text {
+	font-size: 1.6rem;
+}
+
 .fac-text {
+	font-size: 1.2rem;
+	max-width: 500px;
+	margin: 1.2rem auto;
 	opacity: 0;
 	transform: translateY(100px);
 	transition: 1s ease;
