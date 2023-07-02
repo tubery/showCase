@@ -125,3 +125,8 @@ So I have referenced most colurs for the planets
 
 Stuck on making saturn due to its split parts to create visual of rings I will
 need a simpler version of it or use someone elses design
+
+02/07/23
+
+Finished making saturn after modelling it after a design I found. Now I can
+finish up and write the content and submit this project
