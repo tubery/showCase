@@ -16,29 +16,6 @@ The bullet points listed on the requirements are
 
 # Personal Notes / Dev Notes
 
-### 1st Step
-
-The first step is to planning, analysis and design so I will be off this README
-creating my planning my website
-
-### 2nd Step
-
-Scaffolding is the next step and creating a basic layout of the website
-
-### 3rd Step
-
-Next will be making the website in gray scale later implementing colours
-
-### 4th Step
-
-The website will be built for mobile first then will be reactive to screen size
-changes
-
-### 5th Step
-
-Implementing features and polishing the website along with testing will be next
-This will be repeated until completion
-
 18/06/23
 
 Since I was working on projects for the previous cohort I have a better idea of
@@ -130,3 +107,9 @@ need a simpler version of it or use someone elses design
 
 Finished making saturn after modelling it after a design I found. Now I can
 finish up and write the content and submit this project
+
+03/07/23
+
+I have run out of time to truly polish this website and write better content and
+find better images but this will have to do as there is only 13 days until th
+deadline

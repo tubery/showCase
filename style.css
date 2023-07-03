@@ -684,7 +684,7 @@ h4 {
 	gap: 1rem;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
 	.web-dev-wrapper {
 		grid-template-areas:
 			"title title"
@@ -724,20 +724,39 @@ h4 {
 	border: 3px solid var(--tertiary-color);
 }
 
-.card:hover .card-img {
+.card:hover .card-img-1 {
+	transform: scale(1.2);
+}
+.card:hover .card-img-2 {
+	transform: scale(1.2);
+}
+.card:hover .card-img-3 {
 	transform: scale(1.2);
 }
 
 .image-container {
-	width: 100%;
-	height: 200px;
+	height: 250px;
 	overflow: hidden;
 }
 
-.card-img {
+.card-img-1 {
 	width: 100%;
 	height: 100%;
-	background: url("https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80");
+	background: url("https://onlinefizz.com/wp-content/uploads/2015/04/Web-Design-and-Development-large.jpg");
+	background-size: cover;
+	transition: 1s ease;
+}
+.card-img-2 {
+	width: 100%;
+	height: 100%;
+	background: url("https://editor.analyticsvidhya.com/uploads/74941e17.png");
+	background-size: center;
+	transition: 1s ease;
+}
+.card-img-3 {
+	width: 100%;
+	height: 100%;
+	background: url("https://resultsrepeat.com/wp-content/uploads/2020/10/website-design-1-400x250.jpg");
 	background-size: cover;
 	transition: 1s ease;
 }
