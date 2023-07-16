@@ -954,4 +954,16 @@ footer {
 	display: grid;
 	place-items: center;
 	text-align: center;
+	overflow: hidden;
+}
+
+.repo-link {
+	border: 1px solid white;
+	margin: 0 1rem;
+	padding: 0.5rem 1rem;
+	transition: 0.3s ease-in-out;
+}
+
+.repo-link:hover {
+	box-shadow: inset 0 -3em 0 0 var(--quadra-color);
 }
